@@ -1,0 +1,59 @@
+name: PixelgamesTapToDo
+main: Authors\PixelgamesTapToDo\PixelgamesTapToDo
+version: 3.1#
+author: Falk, iStrafeNubzHDyt
+api: [3.0.0-ALPHA11]
+
+commands:
+ t:
+  permission: pgtaptodo.command
+  description: Der Hauptbefehl von PixelgamesTapToDo!
+  usage: /t <add <Befehl>|del <Befehl>|delall|name <Name>|list>
+
+ tr:
+  permission: pgtaptodo.remote
+  description: Ferngesteuerte Verwaltung der TapToDo-Blöcke
+  usage: /tr <Name> <add <Befehl>|del <Befehl>|delall|name <Name>|list>
+  
+ taptodo:
+  permission: pgtaptodo.taptodo
+  description: Zeigt Details oder ein Hilfemenü für PixelgamesTapToDo an
+  usage: /taptodo <info|help>
+
+permissions:
+ pgtaptodo:
+  default: op
+  description: Erlaubt alle Funktionen in PixelgamesTapToDo
+
+  children:
+   pgtaptodo.command:
+    default: op
+
+    children:
+     pgtaptodo.command.add:
+      default: op
+      description: Das Recht, zu einem Block Befehle hinzuzufügen
+
+     pgtaptodo.command.del:
+      default: op
+      description: Das Recht, einen bestimmten Befehl von einem Block zu entfernen
+
+     pgtaptodo.command.delall:
+      default: op
+      description: Das Recht, alle Befehle eines Blocks zu entfernen
+
+     pgtaptodo.command.name:
+      default: op
+      description: Das Recht, Blöcke zu benennen
+
+     pgtaptodo.command.list:
+      default: op
+      description: Das Recht, Befehle eines Blocks aufzulisten
+
+   pgtaptodo.taptodo:
+    default: true
+    description: Das Recht, ein Info-/Hilfemenü anzuzeigen
+       
+   pgtaptodo.tap:
+    default: true
+    description: Erlaubt die Benutzung von TapToDo-Blöcken
