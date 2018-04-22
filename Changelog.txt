@@ -1,24 +1,24 @@
 Changelog PixelgamesTapToDo:
 
 v0.1-release: Plugin als Kopie released, Fehlerkorrekturen
-v0.1.1: Fehler korrigiert bezüglich Dateibezug (noch alter Name)
-v0.2: Fehlerkorrektur und Bearbeitungen in blocks.yml, Block, +CID bei Command., Test in ConfigUpdater (Übers.)
-v1.0#: Alle Dateien korrigiert, teilw. Rückgängig gemacht, alles überarbeitet und übersetzt, +onLoad etc.
+v0.1.1: Fehler korrigiert bezÃ¼glich Dateibezug (noch alter Name)
+v0.2: Fehlerkorrektur und Bearbeitungen in blocks.yml, Block, +CID bei Command, Test in ConfigUpdater (Ãœbers.)
+v1.0#: Alle Dateien korrigiert, teilw. RÃ¼ckgÃ¤ngig gemacht, alles Ã¼berarbeitet und Ã¼bersetzt, +onLoad etc.
 v1.1#: Allgemeines API-Update auf 3.0.0-ALPHA10
-v1.2#: Änderung des Ausdrucks in Command-Description in plugin.yml
-v1.3#: Benutzungshinweis für /tr hinzugefügt
+v1.2#: Ã„nderung des Ausdrucks in Command-Description in plugin.yml
+v1.3#: Benutzungshinweis fÃ¼r /tr hinzugefÃ¼gt
 v1.3.1#: Nicht angezeigter Benutzungshinweis wird jetzt hoffentlich angezeigt
-v1.3.2#: Änderung zu $args[1] zur hoffentlichen Behebung des Benutzungshinweises
-v1.3.3#: $args[1] an anderer Stelle zusätzlich
+v1.3.2#: Ã„nderung zu $args[1] zur hoffentlichen Behebung des Benutzungshinweises
+v1.3.3#: $args[1] an anderer Stelle zusÃ¤tzlich
 v1.3.4#: Message an anderer else-Funktion platziert, bei der vorherigen entfernt
-v1.4#: Versuch, eine No-Permission-Message auszugeben (bei der passenden else-Funktion hinzugefügt)
+v1.4#: Versuch, eine No-Permission-Message auszugeben (bei der passenden else-Funktion hinzugefÃ¼gt)
 v1.4.1#: return true statt false, da die Message nicht kommt wie erwartet
-v1.5#: beim /t - Befehl Benutzungshinweis und Hinweis zur Ingame-Ausführung hinzugefügt
+v1.5#: beim /t - Befehl Benutzungshinweis und Hinweis zur Ingame-AusfÃ¼hrung hinzugefÃ¼gt
 v1.6#: bei beiden Befehlen die Benutzungshinweise optimiert (info und help)
-v2.0#: nach einigen Problemen Info und Help hinzugefügt, plugin.yml und Main angepasst, mehrere Optimierungen
-v2.1#: Permissions für Info und Help hinzugefügt, da es sonst nicht funktioniert
+v2.0#: nach einigen Problemen Info und Help hinzugefÃ¼gt, plugin.yml und Main angepasst, mehrere Optimierungen
+v2.1#: Permissions fÃ¼r Info und Help hinzugefÃ¼gt, da es sonst nicht funktioniert
 v2.1.1#: break bei Info und Help entfernt (Test), weil es immer noch nicht funktioniert
-v3.0#: Struktur geändert wegen Help und Info: Neuer Befehl /taptodo; Main, plugin.yml massiv angepasst
-v3.0.1#: Fehlerkorrektur in Help-Text (unnötiger Fehler xD)
+v3.0#: Struktur geÃ¤ndert wegen Help und Info: Neuer Befehl /taptodo; Main, plugin.yml massiv angepasst
+v3.0.1#: Fehlerkorrektur in Help-Text (unnÃ¶tiger Fehler xD)
 v3.1#: Allgemeines API-Update auf 3.0.0-ALPHA11
 v
