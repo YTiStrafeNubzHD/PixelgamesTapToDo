@@ -21,4 +21,5 @@ v2.1.1#: break bei Info und Help entfernt (Test), weil es immer noch nicht funkt
 v3.0#: Struktur geändert wegen Help und Info: Neuer Befehl /taptodo; Main, plugin.yml massiv angepasst
 v3.0.1#: Fehlerkorrektur in Help-Text (unnötiger Fehler xD)
 v3.1#: Allgemeines API-Update auf 3.0.0-ALPHA11
+v3.2#: Allgemeines API-Update auf 3.0.0-ALPHA12
 v
