@@ -22,4 +22,5 @@ v3.0#: Struktur geändert wegen Help und Info: Neuer Befehl /taptodo; Main, plug
 v3.0.1#: Fehlerkorrektur in Help-Text (unnötiger Fehler xD)
 v3.1#: Allgemeines API-Update auf 3.0.0-ALPHA11
 v3.2#: Allgemeines API-Update auf 3.0.0-ALPHA12
+v3.3#: API-Support für 3.0.0 und 4.0.0 hinzugefügt
 v

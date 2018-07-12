@@ -1,8 +1,8 @@
 name: PixelgamesTapToDo
 main: Authors\PixelgamesTapToDo\PixelgamesTapToDo
-version: 3.2#
+version: 3.3#
 author: Falk, iStrafeNubzHDyt
-api: [3.0.0-ALPHA12]
+api: [3.0.0-ALPHA12, 3.0.0, 4.0.0]
 
 commands:
  t:
