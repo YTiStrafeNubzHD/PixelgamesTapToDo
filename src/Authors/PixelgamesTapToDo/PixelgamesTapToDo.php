@@ -187,8 +187,8 @@ class PixelgamesTapToDo extends PluginBase implements CommandExecutor, Listener{
                     $sender->sendMessage("§ePlugin von Falk, iStrafeNubzHDyt");
                     $sender->sendMessage("§bName: PixelgamesTapToDo");
                     $sender->sendMessage("§bOriginal: TapToDo");
-                    $sender->sendMessage("§bVersion: 3.2#");
-                    $sender->sendMessage("§bFür PocketMine-API: 3.0.0-ALPHA12");
+                    $sender->sendMessage("§bVersion: 3.3#");
+                    $sender->sendMessage("§bFür PocketMine-API: 3.0.0-ALPHA12, 3.0.0, 4.0.0");
                     $sender->sendMessage("§6Permissions: pgtaptodo, pgtaptodo.command, pgtaptodo.command.add, pgtaptodo.command.del, pgtaptodo.command.delall, pgtaptodo.command.name, pgtaptodo.command.list, pgtaptodo.taptodo, pgtaptodo.tap");
                     $sender->sendMessage("§eSpeziell für PIXELGAMES entwickelt");
                     $sender->sendMessage("§e---------------------------------");
