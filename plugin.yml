@@ -1,6 +1,6 @@
 name: PixelgamesTapToDo
 main: Authors\PixelgamesTapToDo\PixelgamesTapToDo
-version: 3.4#
+version: 3.4-beta
 author: Falk, iStrafeNubzHDyt
 api: [4.0.0]
 
