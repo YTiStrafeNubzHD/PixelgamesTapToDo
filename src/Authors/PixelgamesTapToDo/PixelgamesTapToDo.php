@@ -12,6 +12,7 @@ use pocketmine\level\Position;
 use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
+use pocketmine\Server;
 
 class PixelgamesTapToDo extends PluginBase implements CommandExecutor, Listener{
 
@@ -374,7 +375,7 @@ class PixelgamesTapToDo extends PluginBase implements CommandExecutor, Listener{
         $this->blocks = [];
 
         foreach($this->blocksConfig->get("blocks") as $i => $block){
-            if($this->getServer()->getLevelManager->isLevelLoaded($block["level"])){
+            if(Server::getInstance()->getLevelManager()->isLevelLoaded($block["level"])){
                 $pos = new Position($block["x"], $block["y"], $block["z"], $this->getServer()->getLevelByName($block["level"]));
                 $key = $block["x"] . ":" . $block["y"] . ":" . $block["z"] . ":" . $block["level"];
 
