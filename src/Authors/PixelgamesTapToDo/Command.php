@@ -52,7 +52,7 @@ class Command {
         $command = str_replace("%x", $player->getX(), $command);
         $command = str_replace("%y", $player->getY(), $command);
         $command = str_replace("%z", $player->getZ(), $command);
-        $command = str_replace("%l", $player->getLevel()->getName(), $command);
+        $command = str_replace("%l", $player->getLevel()->getDisplayName(), $command);
         $command = str_replace("%ip", $player->getAddress(), $command);
         $command = str_replace("%n", $player->getDisplayName(), $command);
         $command = str_replace("%cid", $player->getClientId(), $command);

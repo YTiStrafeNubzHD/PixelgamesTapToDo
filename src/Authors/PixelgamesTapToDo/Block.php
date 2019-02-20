@@ -110,7 +110,7 @@ class Block{
             'x' => $this->getPosition()->getX(),
             'y' => $this->getPosition()->getY(),
             'z' => $this->getPosition()->getZ(),
-            'level' => $this->getPosition()->getLevel()->getName(),
+            'level' => $this->getPosition()->getLevel()->getDisplayName(),
             'commands' => $this->getCommands()
         ];
 

@@ -12,6 +12,7 @@ use pocketmine\level\Position;
 use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
+use pocketmine\Server;
 
 class PixelgamesTapToDo extends PluginBase implements CommandExecutor, Listener{
 
@@ -115,7 +116,7 @@ class PixelgamesTapToDo extends PluginBase implements CommandExecutor, Listener{
 
                             foreach($this->getBlocksByName($args[0]) as $block){
                                 $pos = $block->getPosition();
-                                $sender->sendMessage("§6[PGTapToDo] Befehle für Block bei X:" . $pos->getX() . " Y:" . $pos->getY() . " Z:" . $pos->getY() . " Welt:" . $pos->getLevel()->getName());
+                                $sender->sendMessage("§6[PGTapToDo] Befehle für Block bei X:" . $pos->getX() . " Y:" . $pos->getY() . " Z:" . $pos->getY() . " Welt:" . $pos->getLevel()->getDisplayName());
 
                                 foreach($block->getCommands() as $cmd){
                                     $sender->sendMessage("§6[PGTapToDo] - $cmd");
@@ -324,7 +325,7 @@ class PixelgamesTapToDo extends PluginBase implements CommandExecutor, Listener{
     }
 
     public function onLevelLoad(LevelLoadEvent $event){
-        $this->getLogger()->info("Die Blöcke werden neu geladen, da die Welt " . $event->getLevel()->getName() . " geladen wird...");
+        $this->getLogger()->info("Die Blöcke werden neu geladen, da die Welt " . $event->getLevel()->getDisplayName() . " geladen wird...");
         $this->parseBlockData();
     }
 
@@ -358,7 +359,7 @@ class PixelgamesTapToDo extends PluginBase implements CommandExecutor, Listener{
 
     public function getBlock($x, $y, $z, $level){
         if ($x instanceof Position) {
-            return (isset($this->blocks[$x->getX() . ":" . $x->getY() . ":" . $x->getZ() . ":" . $x->getLevel()->getName()]) ? $this->blocks[$x->getX() . ":" . $x->getY() . ":" . $x->getZ() . ":" . $x->getLevel()->getName()] : false);
+            return (isset($this->blocks[$x->getX() . ":" . $x->getY() . ":" . $x->getZ() . ":" . $x->getLevel()->getDisplayName()]) ? $this->blocks[$x->getX() . ":" . $x->getY() . ":" . $x->getZ() . ":" . $x->getLevel()->getDisplayName()] : false);
             
         } else {
             return (isset($this->blocks[$x . ":" . $y . ":" . $z . ":" . $level]) ? $this->blocks[$x . ":" . $y . ":" . $z . ":" . $level] : false);
@@ -374,8 +375,8 @@ class PixelgamesTapToDo extends PluginBase implements CommandExecutor, Listener{
         $this->blocks = [];
 
         foreach($this->blocksConfig->get("blocks") as $i => $block){
-            if($this->getServer()->isLevelLoaded($block["level"])){
-                $pos = new Position($block["x"], $block["y"], $block["z"], $this->getServer()->getLevelByName($block["level"]));
+            if(Server::getInstance()->getLevelManager()->isLevelLoaded($block["level"])){
+                $pos = new Position($block["x"], $block["y"], $block["z"], Server::getInstance()->getLevelManager()->getLevelByName($block["level"]));
                 $key = $block["x"] . ":" . $block["y"] . ":" . $block["z"] . ":" . $block["level"];
 
                 if (isset($block["name"])) {
@@ -427,7 +428,7 @@ class PixelgamesTapToDo extends PluginBase implements CommandExecutor, Listener{
      */
 
     public function saveBlock(Block $block){
-        $this->blocks[$block->getPosition()->getX() . ":" . $block->getPosition()->getY() . ":" . $block->getPosition()->getZ() . ":" . $block->getPosition()->getLevel()->getName()] = $block;
+        $this->blocks[$block->getPosition()->getX() . ":" . $block->getPosition()->getY() . ":" . $block->getPosition()->getZ() . ":" . $block->getPosition()->getLevel()->getDisplayName()] = $block;
         $blocks = $this->blocksConfig->get("blocks");
         $blocks[$block->id] = $block->toArray();
         $this->blocksConfig->set("blocks", $blocks);
