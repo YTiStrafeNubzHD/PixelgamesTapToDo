@@ -374,7 +374,7 @@ class PixelgamesTapToDo extends PluginBase implements CommandExecutor, Listener{
         $this->blocks = [];
 
         foreach($this->blocksConfig->get("blocks") as $i => $block){
-            if($this->getServer()->isLevelLoaded($block["level"])){
+            if($this->getServer()->getLevelManager->isLevelLoaded($block["level"])){
                 $pos = new Position($block["x"], $block["y"], $block["z"], $this->getServer()->getLevelByName($block["level"]));
                 $key = $block["x"] . ":" . $block["y"] . ":" . $block["z"] . ":" . $block["level"];
 
